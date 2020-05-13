@@ -1,0 +1,17 @@
+.app-title-container {
+    width: 100%;
+}
+
+.app-title-div {
+    width: 50%;
+    margin-left: 25%;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.app-title-div:hover {
+    background-color: blue;
+    transition: 0.5s ease-in-out;
+}
