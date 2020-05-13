@@ -1,12 +1,25 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-const Country = props => {
+import { fetchCountries } from '../actions/countryAction'
+
+const Country = ({
+    fetchCountries
+}) => {
+    useEffect(() => {
+        fetchCountries();
+    }, [fetchCountries]);
+
     return (
-        <h2>Country</h2>
-    )
+        <main>
+            <h1>Country</h1>
+            
+            {/* list of countries */}
+        </main>
+    );
 }
+
+
 
 const mapStateToProps = state => {
     console.log({ state });
@@ -17,5 +30,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    {}
+    { fetchCountries }
 )(Country)
