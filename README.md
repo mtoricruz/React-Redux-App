@@ -48,6 +48,16 @@ This is the chance to let your skills shine! You have learned _sooo_ much the la
 
 Once you have chosen an API to consume, build an app that makes sense for the data you will be retrieving. Have fun with this. You get to be the creative mind. You get to make all the decisions here. I'm excited to see what you build!
 
+```text
+Set up "empty" reducer and initial state 👉 
+Set up store and Provider 👉
+Connect components 👉
+Add events and event handlers in UI 👉 
+Build action creators 👉
+write the reducer logic for the actions 👉 
+Rinse and repeat
+```
+
 ## Stretch Problems
 
 Take the app as far as you can go! Styling, redux hooks, another API, an input to fetch data dynamically, etc. Work on it, improve it until the end of the day. If you find yourself finishing with time left to spare, jump on with your TL or fellow student to ask them what feature they think you should build next. Good luck!
