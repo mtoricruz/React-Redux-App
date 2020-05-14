@@ -29,10 +29,11 @@ const Country = ({
             {isFetchingCountry && <h3>Fetching Data...</h3>}
             {/* list of stats */}
             {!isFetchingCountry && (
-                <div>
+                <div className='case-container'>
                     <div className='new-cases'>
                         <h2>New Cases</h2>
-                        <p>New Confirmed Cases: {NewConfirmed}</p>
+                        <p>New Confirmed Cases: {NewConfirmed}
+                        </p>
                         <p>New Death Cases: {NewDeaths}</p>
                         <p>Newly Recovered Cases: {NewRecovered}</p>
                     </div>
