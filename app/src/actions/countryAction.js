@@ -10,8 +10,8 @@ export const fetchCountry = () => {
         axios
           .get('https://api.covid19api.com/summary')
           .then(res => {
-            //   console.log(res.data.Countries[176])
-            dispatch({ type: FETCH_COUNTRIES_SUCCESS, payload: res.data.Countries[176]})
+              console.log(res.data.Countries[177])
+            dispatch({ type: FETCH_COUNTRIES_SUCCESS, payload: res.data.Countries[177]})
           })
           .catch(err => console.log(err));
     }

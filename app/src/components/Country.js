@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 
 import { fetchCountry } from '../actions/countryAction';
 
+// import Form from '../components/Form'
+
 import './Country.css'
 
 const Country = ({
     isFetchingCountry,
+    Country,
     NewConfirmed,
     NewDeaths,
     NewRecovered,
@@ -21,14 +24,20 @@ const Country = ({
 
     return (
         <main>
-            <div className='app-title-container'>
-                <div className='app-title-div'>
-                    <h1>USA Covid-19 Info</h1>
-                </div>
-            </div>
+            {/* <Form 
+                values={formValues}
+                onInputChange={onInputChange}
+                onSubmit={onSubmit}
+            /> */}
             {isFetchingCountry && <h3>Fetching Data...</h3>}
             {/* list of stats */}
             {!isFetchingCountry && (
+                <div>
+                <div className='app-title-container'>
+                    <div className='app-title-div'>
+                        <h1>{Country}'s Covid-19 Info</h1>
+                    </div>
+                </div>
                 <div className='case-container'>
                     <div className='new-cases'>
                         <h2>New Cases</h2>
@@ -44,6 +53,7 @@ const Country = ({
                         <p>Total Recovered Cases: {TotalRecovered}</p>
                     </div>
                 </div>
+                </div>
             )}
         </main>
     );
@@ -55,6 +65,7 @@ const mapStateToProps = state => {
     console.log({ state });
     return {
         isFetchingCountry: state.isFetchingCountry,
+        Country: state.Country,
         NewConfirmed: state.NewConfirmed,
         NewDeaths: state.NewDeaths,
         NewRecovered: state.NewRecovered,

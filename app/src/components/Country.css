@@ -9,7 +9,7 @@ main {
 }
 
 .app-title-div {
-    width: 50%;
+    width: 40%;
     justify-content: center;
     background-color: red;
     border-radius: 10px;
@@ -18,7 +18,7 @@ main {
 }
 
 .app-title-div:hover {
-    background-color: blue;
+    background-color: pink;
     transition: 0.5s ease-in-out;
 }
 
