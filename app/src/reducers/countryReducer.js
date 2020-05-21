@@ -1,15 +1,24 @@
-import { FETCH_COUNTRIES_START, FETCH_COUNTRIES_SUCCESS } from '../actions/countryAction'
+import { 
+    FETCH_COUNTRIES_START, 
+    FETCH_COUNTRIES_SUCCESS, 
+} from '../actions/countryAction'
 
 const initialState = {
     isFetchingCountry: false,
-    NewConfirmed: null,
-    NewDeaths: null,
-    NewRecovered: null,
-    TotalConfirmed: null,
-    TotalDeaths: null,
-    TotalRecovered: null,
-    countryError: ''
+    CountryInfo: [
+        { 
+        Country: null,
+        NewConfirmed: null,
+        NewDeaths: null,
+        NewRecovered: null,
+        TotalConfirmed: null,
+        TotalDeaths: null,
+        TotalRecovered: null,
+        countryError: '' 
+    }
+    ]
 }
+
 
 export const countryReducer = (state = initialState, action) => {
     switch(action.type) {
@@ -22,6 +31,7 @@ export const countryReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetchingCountry: false,
+                Country: action.payload.Country,
                 NewConfirmed: action.payload.NewConfirmed,
                 NewDeaths: action.payload.NewDeaths,
                 NewRecovered: action.payload.NewRecovered,
